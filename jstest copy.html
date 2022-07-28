@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+    <title>test</title>
+</head>
+ 
+<bo dy>
+
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>last</h1>
+    <h1>last</h1>
+    <h1>last</h1>
+
+    <script>
+
+        const urls = [
+            'http://127.0.0.1:9001/?pass=DYuYbM2SSm&action=inserttrack&filename=http://127.0.0.1:8000/storage/public/sw/mohsnbdr-4-1658371265.mp3&pos=-2',
+            'http://127.0.0.1:9001/?pass=DYuYbM2SSm&action=inserttrack&filename=http://127.0.0.1:8000/storage/public/sw/othm-2-1658512206.mp3&pos=-2'
+        ]
+
+        urls.forEach((item) => {
+            $.get(item, function (data) {
+                $("body").append(data);
+            });
+        })
+
+
+    </script>
+</body>
+
+</html>
